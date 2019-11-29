@@ -1,0 +1,189 @@
+                    $primary:#f05f40;
+                    $secondary:#212547;
+                    $bg:url("../img/header.jpg");
+                    @mixin trans {
+                        transition: all 0.5s ease-in-out;
+                    }
+                    
+                    body {
+                        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                    }
+                    
+                    * {
+                        margin: 0;
+                        padding: 0;
+                        box-sizing: border-box;
+                    }
+                    
+                    .container {
+                        width: 80%;
+                        margin: auto;
+                    }
+                    
+                    //extend 
+                    .w_f {
+                        width: 50%;
+                        float: left;
+                    }
+                    
+                    .h2 {
+                        color: #fff;
+                        padding-bottom: 10px;
+                        font-weight: bold;
+                        padding-top: 25%;
+                    }
+                    
+                    .span {
+                        display: block;
+                        width: 80px;
+                        height: 5px;
+                        background: #f05f40;
+                        margin: 1rem auto;
+                    }
+                    
+                    .p {
+                        line-height: 1.8;
+                        color: #ddd;
+                        letter-spacing: 3px;
+                    }
+                    
+                    .button {
+                        text-transform: uppercase;
+                        padding: 15px;
+                        width: 180px;
+                        color: #fff;
+                        height: 60px;
+                        border: none;
+                        border-radius: 15px;
+                        background-color: #f05f40;
+                        @include trans;
+                        cursor: pointer;
+                        &:hover {
+                            color: #212547;
+                            background-color: #fff;
+                        }
+                    }
+                    
+                    header {
+                        .logo {
+                            @extend .w_f;
+                            h2 {
+                                color: #c9c5b2;
+                            }
+                        }
+                        ul {
+                            @extend .w_f;
+                            display: flex;
+                            li {
+                                list-style: none;
+                                padding: 10px 15px;
+                                a {
+                                    text-decoration: none;
+                                    text-transform: uppercase;
+                                    color: #c9c5b2;
+                                    font-weight: bold;
+                                    @include trans;
+                                    &:hover {
+                                        color: $primary;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    
+                    .cont {
+                        background-image: $bg;
+                        height: 100vh;
+                        background-size: cover;
+                        text-align: center;
+                        h2 {
+                            @extend .h2;
+                        }
+                        p {
+                            @extend .p;
+                        }
+                        span {
+                            @extend .span;
+                        }
+                        button {
+                            @extend .button;
+                        }
+                    }
+                    
+                    .need {
+                        padding: 2rem 0;
+                        text-align: center;
+                        background-color: #f05f40;
+                        h2 {
+                            @extend .h2;
+                            padding-top: 10px;
+                        }
+                        p {
+                            @extend .p;
+                        }
+                        span {
+                            @extend .span;
+                            background: #fff;
+                        }
+                        button {
+                            @extend .button;
+                            background: #fff;
+                            color: $secondary;
+                            &:hover {
+                                background: $primary;
+                                color: #fff;
+                            }
+                        }
+                    }
+                    
+                    .service {
+                        text-align: center;
+                        height: 600px;
+                        background-color: #fff;
+                        h2 {
+                            @extend .h2;
+                            color: #f05f40;
+                            padding: 50px;
+                        }
+                        span {
+                            @extend .span;
+                        }
+                        .service-items {
+                            display: grid;
+                            grid-template-columns: repeat(4, 1fr);
+                            grid-gap: 15px;
+                            padding: 1.5rem 0;
+                        }
+                        h3 {
+                            margin: 1rem 0;
+                        }
+                    }
+                    
+                    @for$i from 1 through 4 {
+                        .service-items .fa-#{$i} {
+                            color: $primary;
+                        }
+                    }
+
+
+                .images{
+
+display: grid;
+grid-template-columns: repeat(3,1fr);
+font-size: 0;
+div{
+
+    img{
+
+        width: 100%;
+      
+    }
+}
+
+
+
+
+                  }  
+
+
+

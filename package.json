@@ -1,0 +1,14 @@
+{
+    "name": "four_sit",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "build": "node-sass sas/main.scss  dist/css/style.css -w "
+    },
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "node-sass": "^4.13.0"
+    }
+}
